@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 # OScope — Interactive Operating System Resource Management & Performance Analysis Platform
 
-[![OS Lab Project](https://img.shields.io/badge/Course-Operating%20Systems%20Lab%20(40%20Marks)-cyan)](https://github.com)
 [![Tests](https://img.shields.io/badge/Vitest-19%2F19%20Passing-emerald)](https://github.com)
 [![Next.js](https://img.shields.io/badge/Next.js-14.2%20App%20Router-violet)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue)](https://www.typescriptlang.org)
-[![License](https://img.shields.io/badge/Academic-VTOP%20Compliant-amber)](https://github.com)
 
-**OScope** is an interactive, browser-based Operating Systems laboratory and resource-management simulation platform built for university-level engineering project demonstrations (B.Tech Computer Science & Engineering). 
+**OScope** is an interactive, browser-based operating system resource-management and performance analysis platform.
 
 Rather than displaying static numbers or canned dashboards, OScope contains genuine algorithmic simulation engines implemented strictly in accordance with textbook operating system principles (*Silberschatz, Galvin & Gagne, "Operating System Concepts", 10th Edition*).
 
@@ -76,87 +73,31 @@ Rather than displaying static numbers or canned dashboards, OScope contains genu
 - Algorithmic Complexity & Trade-Off Matrix (Time complexity, advantages, disadvantages, and vulnerabilities).
 - 1-click complete laboratory data export in JSON format.
 
-### 🎓 Faculty Guided Demo & Viva Mode
-- Integrated walkthrough modal tailored for university evaluations (Review I & Review II).
-- Step-by-step checklist of demonstration goals, talking points for the evaluators, and likely viva voce questions with model academic answers.
-
 ---
 
-## 👥 Student Team Responsibilities (Two-Member Project)
+## 💻 Quick Start
 
-| Module / Area | Team Member 1 | Team Member 2 |
-| :--- | :--- | :--- |
-| **CPU Scheduling Engine** | Algorithm Design (FCFS, SJF, SRTF, Priority) | Round Robin implementation & Gantt Chart component |
-| **Memory Management** | Contiguous Placement (First/Best/Worst Fit) | Paging & Page Replacement (FIFO, LRU, Optimal) |
-| **Deadlock Lab** | Banker's Safety Algorithm & Need Matrix | Resource-Request Simulator & Tentative Rollback |
-| **Process Control** | 5-State Lifecycle Transition State Machine | PCB Management Table, Search & Filter UI |
-| **Testing & Analytics** | Vitest Automated Unit Tests (19 Test Cases) | Analytical Charts, Formulas & Guided Demo Mode |
+Requires Node.js 18 or later. From the project folder, run:
 
----
-
-## 💻 Quick Start Guide (Windows Laptop)
-
-### Prerequisites
-- **Node.js**: v18.0.0 or later (Tested on Node v24.18.0 and npm 11.16.0)
-- **PowerShell** or **Command Prompt**
-
-> **Note for Windows Users**: On Windows PowerShell, script execution policies may block `npm.ps1`. Always run `npm.cmd` and `npx.cmd` in PowerShell, or run `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` if needed.
-
----
-
-### Step-by-Step Execution
-
-#### 1. Open the project folder
-Open PowerShell in the project directory:
-```powershell
-cd "c:\Users\Asus\Downloads\Os group project"
+```bash
+npm install
+npm run dev
 ```
 
-#### 2. Install dependencies
-```powershell
-npm.cmd install
-```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-#### 3. Run the automated test suite
-To run all 19 unit tests and verify mathematical correctness:
-```powershell
-npm.cmd test
-# or
-npx.cmd vitest run
-```
-**Expected Test Output**:
-```text
- ✓ src/__tests__/contiguous.test.ts (3 tests)
- ✓ src/__tests__/bankers.test.ts (6 tests)
- ✓ src/__tests__/cpu.test.ts (6 tests)
- ✓ src/__tests__/pageReplacement.test.ts (4 tests)
+To run the tests or create a production build:
 
- Test Files  4 passed (4)
-      Tests  19 passed (19)
-```
-
-#### 4. Start the development server
-```powershell
-npm.cmd run dev
-```
-
-#### 5. Open in your browser
-Navigate to:
-```
-http://localhost:3000
-```
-
-#### 6. Build for production (Optional)
-```powershell
-npm.cmd run build
-npm.cmd run start
+```bash
+npm test
+npm run build
 ```
 
 ---
 
-## 🧪 Demonstration Sequence for Faculty Review
+## 🧪 Try the Simulations
 
-Follow this quick 5-step sequence during your lab evaluation:
+Follow this quick sequence to explore the simulations:
 
 1. **Overview & Problem Statement**:
    - Open `http://localhost:3000`.
@@ -177,9 +118,6 @@ Follow this quick 5-step sequence during your lab evaluation:
 5. **Process Lifecycle Demo**:
    - Click **Process Control** tab.
    - Click **Create Process**, spawn a process, and dispatch it through the 5-state lifecycle model.
-6. **Viva Assistance**:
-   - Click the green **Faculty Guided Demo** button in the header at any time to open the built-in viva guide with model answers.
-
 ---
 
 ## 🛡️ Known Limitations & Explicit Scope Notes
@@ -210,7 +148,6 @@ Follow this quick 5-step sequence during your lab evaluation:
 │   │   ├── deadlock/          # DeadlockLab, MatrixGrid, BankersSafetyVisualizer
 │   │   ├── process/           # ProcessMonitorLab (5-state lifecycle PCB workspace)
 │   │   ├── analytics/         # AnalyticsLab (Formulas, trade-off matrix, JSON exporter)
-│   │   └── presentation/      # GuidedDemoModal (Faculty viva guide)
 │   ├── lib/
 │   │   ├── cpu/               # Pure FCFS, SJF, SRTF, Priority, Round Robin engines
 │   │   ├── memory/            # Pure First/Best/Worst Fit & FIFO/LRU/Optimal engines
@@ -223,7 +160,3 @@ Follow this quick 5-step sequence during your lab evaluation:
 │       ├── pageReplacement.test.ts # Paging replacement tests
 │       └── bankers.test.ts    # Banker's algorithm tests
 ```
-=======
-# OScope
-Interactive Operating System Resource Management and Performance Analysis Platform
->>>>>>> origin/main
