@@ -1,5 +1,4 @@
 import React from "react";
-import { Badge } from "./common/Badge";
 import { Button } from "./common/Button";
 import {
   Cpu,
@@ -48,9 +47,6 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <span className="text-base font-extrabold tracking-tight text-white font-mono">
                   OS<span className="text-emerald-300">cope</span>
                 </span>
-                <Badge variant="cyan" size="sm">
-                  v2.4 Lab
-                </Badge>
               </div>
               <p className="text-[10px] text-slate-400 font-mono -mt-0.5">
                 OS Resource Management & Analysis Platform

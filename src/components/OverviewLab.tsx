@@ -31,13 +31,13 @@ export const OverviewLab: React.FC<OverviewLabProps> = ({
         <div className="relative z-10 max-w-3xl space-y-4">
           <div className="flex flex-wrap items-center gap-2.5">
             <Badge variant="cyan" size="md">
-              Interactive OS Lab
+              Interactive Simulations
             </Badge>
             <Badge variant="emerald" size="md">
-              Offline Simulation
+              Algorithm Visualizations
             </Badge>
             <Badge variant="violet" size="md">
-              Analysis Workspace
+              Performance Analytics
             </Badge>
           </div>
 
