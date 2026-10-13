@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 241, 245, 249;
-  --background-start-rgb: 9, 13, 22;
-  --background-end-rgb: 13, 19, 31;
+  --foreground-rgb: 236, 245, 240;
+  --background-start-rgb: 8, 17, 13;
+  --background-end-rgb: 5, 10, 8;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: radial-gradient(circle at 50% 0%, #151d30 0%, #090d16 65%, #05070c 100%);
+  background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.18) 0%, rgba(9, 20, 16, 0.94) 28%, rgba(5, 10, 8, 1) 72%, #020806 100%);
   min-height: 100vh;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 }
@@ -22,36 +22,36 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0d131f;
+  background: #0b1714;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #1f4c42;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #2e6b5a;
 }
 
 .glass-panel {
-  background: rgba(19, 27, 42, 0.75);
+  background: rgba(15, 26, 21, 0.78);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(167, 243, 208, 0.1);
 }
 
 .glass-panel-subtle {
-  background: rgba(15, 22, 34, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(12, 22, 18, 0.72);
+  border: 1px solid rgba(167, 243, 208, 0.08);
 }
 
 .glow-cyan {
-  box-shadow: 0 0 20px -5px rgba(6, 182, 212, 0.35);
+  box-shadow: 0 0 20px -5px rgba(16, 185, 129, 0.35);
 }
 
 .glow-violet {
-  box-shadow: 0 0 20px -5px rgba(139, 92, 246, 0.35);
+  box-shadow: 0 0 20px -5px rgba(74, 222, 128, 0.3);
 }
 
 .glow-emerald {

@@ -7,7 +7,6 @@ import {
   ShieldCheck,
   Activity,
   BarChart2,
-  GraduationCap,
   Terminal,
   Home,
 } from "lucide-react";
@@ -15,13 +14,11 @@ import {
 interface NavbarProps {
   activeTab: string;
   onTabChange: (tab: string) => void;
-  onOpenDemo: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
   activeTab,
   onTabChange,
-  onOpenDemo,
 }) => {
   const navItems = [
     { key: "OVERVIEW", label: "Overview", icon: <Home className="w-4 h-4" /> },
@@ -33,7 +30,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full glass-panel border-b border-slate-800/80 shadow-lg">
+    <header className="sticky top-0 z-40 w-full glass-panel border-b border-emerald-900/50 shadow-lg shadow-emerald-950/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo & Brand Identity */}
@@ -41,15 +38,15 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="flex items-center gap-3 cursor-pointer group"
             onClick={() => onTabChange("OVERVIEW")}
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-600 via-violet-600 to-emerald-400 p-0.5 shadow-md shadow-cyan-950">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-500 via-green-500 to-emerald-300 p-0.5 shadow-md shadow-emerald-950">
               <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
-                <Terminal className="w-4 h-4 text-cyan-400 group-hover:rotate-12 transition-transform duration-300" />
+                <Terminal className="w-4 h-4 text-emerald-300 group-hover:rotate-12 transition-transform duration-300" />
               </div>
             </div>
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-base font-extrabold tracking-tight text-white font-mono">
-                  OS<span className="text-cyan-400">cope</span>
+                  OS<span className="text-emerald-300">cope</span>
                 </span>
                 <Badge variant="cyan" size="sm">
                   v2.4 Lab
@@ -62,7 +59,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           {/* Navigation Tabs */}
-          <nav className="hidden md:flex items-center gap-1 bg-slate-950/70 p-1 rounded-xl border border-slate-800/80">
+          <nav className="hidden md:flex items-center gap-1 bg-slate-950/70 p-1 rounded-xl border border-emerald-900/50">
             {navItems.map((item) => {
               const isActive = activeTab === item.key;
               return (
@@ -71,7 +68,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   onClick={() => onTabChange(item.key)}
                   className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition-all ${
                     isActive
-                      ? "bg-cyan-600 text-white font-bold shadow-sm shadow-cyan-950"
+                      ? "bg-emerald-600 text-white font-bold shadow-sm shadow-emerald-950"
                       : "text-slate-400 hover:text-slate-200 hover:bg-slate-900"
                   }`}
                 >
@@ -84,18 +81,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             })}
           </nav>
 
-          {/* Faculty Demo Button */}
-          <div className="flex items-center gap-2">
-            <Button
-              variant="emerald"
-              size="sm"
-              onClick={onOpenDemo}
-              icon={<GraduationCap className="w-4 h-4" />}
-              className="glow-emerald"
-            >
-              Faculty Guided Demo
-            </Button>
-          </div>
+          <div className="flex items-center gap-2" />
         </div>
 
         {/* Mobile Nav row */}

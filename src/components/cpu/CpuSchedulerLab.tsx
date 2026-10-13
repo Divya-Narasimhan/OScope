@@ -229,6 +229,21 @@ export const CpuSchedulerLab: React.FC = () => {
         </Card>
       ) : (
         <div className="space-y-6">
+          {/* Interactive Workload Editor */}
+          <Card
+            title="Workload Editor & Process Configuration"
+            subtitle="Modify arrival times, burst times, or priorities to observe real-time scheduler reactions"
+          >
+            <ProcessTable
+              processes={processes}
+              onChange={(updated) => {
+                setProcesses(updated);
+                setPlaybackTime(0);
+              }}
+              onReset={() => handlePresetChange(selectedPresetId)}
+            />
+          </Card>
+
           {/* Gantt Chart & Playback Controls Card */}
           <Card
             title="CPU Dispatch Timeline (Gantt Chart)"
@@ -272,7 +287,7 @@ export const CpuSchedulerLab: React.FC = () => {
                       onClick={() => setPlaybackSpeed(spd)}
                       className={`px-2 py-0.5 rounded ${
                         playbackSpeed === spd
-                          ? "bg-cyan-600 text-white font-bold"
+                          ? "bg-emerald-600 text-white font-bold"
                           : "text-slate-400 hover:text-white"
                       }`}
                     >
@@ -373,21 +388,6 @@ export const CpuSchedulerLab: React.FC = () => {
                 </tbody>
               </table>
             </div>
-          </Card>
-
-          {/* Interactive Workload Editor */}
-          <Card
-            title="Workload Editor & Process Configuration"
-            subtitle="Modify arrival times, burst times, or priorities to observe real-time scheduler reactions"
-          >
-            <ProcessTable
-              processes={processes}
-              onChange={(updated) => {
-                setProcesses(updated);
-                setPlaybackTime(0);
-              }}
-              onReset={() => handlePresetChange(selectedPresetId)}
-            />
           </Card>
 
           {/* Step-by-Step Execution Audit Log */}
