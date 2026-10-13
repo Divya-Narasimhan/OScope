@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # OScope — Interactive Operating System Resource Management & Performance Analysis Platform
 
 [![OS Lab Project](https://img.shields.io/badge/Course-Operating%20Systems%20Lab%20(40%20Marks)-cyan)](https://github.com)
@@ -222,3 +223,7 @@ Follow this quick 5-step sequence during your lab evaluation:
 │       ├── pageReplacement.test.ts # Paging replacement tests
 │       └── bankers.test.ts    # Banker's algorithm tests
 ```
+=======
+# OScope
+Interactive Operating System Resource Management and Performance Analysis Platform
+>>>>>>> origin/main
